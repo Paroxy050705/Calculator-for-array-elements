@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink">
+    <h1>
+        <center>
+            Count addition,subtraction,multiplication,division of 1 to n numbers
+        </center>
+    </h1>
+<br>
+<h2>
+    <ul type="square">
+        <li>
+            Press 1 for addition
+        </li>
+        <li>
+            Press 2 for subtraction
+        </li>
+        <li>
+            Press 3 for multiplication
+        </li>
+        <li>
+            Press 4 for division
+        </li>
+    </ul>
+</h2>
+<script>
+    let a=Number(prompt("Enter the value of n:"));
+    let arr=[];
+    for(let i=1;i<=a;i++){
+        arr[i-1]=i;
+    }
+    document.write("The value of n is:",a);
+    document.write("<br>The array is:",[arr]);
+    let ch;
+    ch=Number(prompt("Enter case:"));
+    switch(ch){
+        case 1:
+            let sumarr=arr.reduce((prev,resul)=>{
+                return (prev+resul);
+            })
+            document.write("<br>The addition of these numbers are:"+sumarr);
+            break;
+            case 2:
+            let subarr=arr.reduce((prev,resul)=>{
+                return (prev-resul);
+            })
+            document.write("<br>The subtraction of these numbers are:"+subarr);
+            break;
+            case 3:
+            let mularr=arr.reduce((prev,resul)=>{
+                return (prev*resul);
+            })
+            document.write("<br>The multiplication of these numbers are:"+mularr);
+            break;
+            case 4:
+            let divarr=arr.reduce((prev,resul)=>{
+                return (prev/resul);
+            })
+            document.write("<br>The division of these numbers are:"+divarr);
+           break;
+           default:
+            document.write("<br>You entered a wrong case.");
+            break;
+        }
+</script>
+</body>
+</html>
